@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>codekuoval admin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=DM+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="/assets/css/admin.css">
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"></script>
+</head>
+<body class="locked">
+
+  <!-- --loading-screen-- -->
+
+  <div id="loader" class="loader">
+    <div class="stars" id="stars"></div>
+    <i class="fa-solid fa-rocket rocket"></i>
+    <p class="loader-text">Memuat <span id="loaderPage">Admin Panel</span></p>
+  </div>
+
+  <!-- --login-gate-- -->
+
+  <section id="gate" class="gate">
+    <div class="card gcard">
+      <div class="brand"><i class="fa-solid fa-code"></i> codekuoval</div>
+      <input id="gu" class="field" type="text" placeholder="Username" autocomplete="username" autocapitalize="off">
+      <input id="gp" class="field" type="password" placeholder="Password" autocomplete="current-password">
+      <p id="gerr" class="gerr"></p>
+      <button id="glogin" class="btn"><i class="fa-solid fa-lock-open"></i> Masuk</button>
+    </div>
+  </section>
+
+  <!-- --header-- -->
+
+  <header class="top">
+    <a class="back" href="/" aria-label="Kembali"><i class="fa-solid fa-arrow-left"></i></a>
+    <div class="title">Admin Panel</div>
+    <button id="logout" class="back" aria-label="Keluar"><i class="fa-solid fa-right-from-bracket"></i></button>
+  </header>
+
+  <main>
+
+    <!-- --overview-- -->
+
+    <section id="home" class="hero">
+      <p class="lbl">Total paste</p>
+      <div class="big" id="bigCount">0</div>
+      <div class="row small"><span id="slotLeft"></span><span id="slotUsed"></span></div>
+      <div class="wave g"><i id="quotaBar"></i></div>
+    </section>
+
+    <div class="minis">
+      <div class="mini c-b"><small>Ukuran</small><b id="sizeTotal">0 KB</b></div>
+      <div class="mini c-p"><small>Teratas</small><b id="topLang">-</b></div>
+      <div class="mini c-l"><small>Bahasa</small><b id="langCount">0</b></div>
+    </div>
+
+    <!-- --manage-- -->
+
+    <section id="manage" class="block">
+      <div class="head"><h2>Kelola paste</h2></div>
+      <div class="toolbar">
+        <input id="search" class="field" type="text" placeholder="Cari paste">
+        <select id="filter" class="field"></select>
+      </div>
+      <div id="list"></div>
+    </section>
+
+    <!-- --danger-zone-- -->
+
+    <section id="danger" class="block">
+      <div class="head"><h2>Aksi</h2></div>
+      <div class="card">
+        <button id="clearAll" class="btn danger"><i class="fa-solid fa-trash"></i> Hapus semua paste</button>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- --floating-nav-- -->
+
+  <nav class="fnav three" id="fnav">
+    <button class="nbtn active" data-target="home"><span class="ic"><i class="fa-solid fa-chart-simple"></i></span><small>Ringkasan</small></button>
+    <button class="nbtn" data-target="manage"><span class="ic"><i class="fa-solid fa-list"></i></span><small>Paste</small></button>
+    <button class="nbtn" data-target="danger"><span class="ic"><i class="fa-solid fa-triangle-exclamation"></i></span><small>Aksi</small></button>
+  </nav>
+
+  <!-- --modal-- -->
+
+  <div id="modal" class="modal"><div class="mbox" id="mbox"></div></div>
+  <div id="toast" class="toast"></div>
+
+  <script src="/assets/js/common.js"></script>
+  <script src="/assets/js/admin.js"></script>
+</body>
+</html>
