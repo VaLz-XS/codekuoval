@@ -1,0 +1,22 @@
+/* --view-head-- */
+
+.vtitle { font-size: 26px; font-weight: 700; line-height: 1.2; margin: 8px 4px 12px; word-break: break-word; animation: rise .6s ease both; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 4px 16px; }
+.chip { background: var(--blue); border-radius: 999px; padding: 6px 12px; font-size: 12px; font-weight: 500; }
+.chip.alt { background: var(--pink); }
+
+/* --view-actions-- */
+
+.vacts { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-bottom: 14px; }
+.vacts .btn { padding: 12px 14px; font-size: 14px; text-decoration: none; }
+.vacts .btn.ghost { background: var(--surface); color: var(--text); }
+
+/* --code-block-- */
+
+.codebox { background: var(--surface); border-radius: 24px; padding: 6px; animation: rise .8s ease both; }
+.codebox pre { overflow-x: auto; -webkit-overflow-scrolling: touch; border-radius: 20px; }
+.codebox code.hljs { background: var(--surface); font-family: 'DM Mono', monospace; font-size: 13px; line-height: 1.6; padding: 14px; display: block; white-space: pre; }
+
+.sk.tall { height: 260px; border-radius: 24px; }
+.notfound { text-align: center; padding: 60px 10px; color: var(--muted); }
+.notfound i { font-size: 40px; color: var(--primary); margin-bottom: 14px; display: block; }
