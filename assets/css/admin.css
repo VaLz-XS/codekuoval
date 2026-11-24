@@ -1,0 +1,51 @@
+/* --admin-header-- */
+
+.back { width: 42px; height: 42px; display: grid; place-items: center; background: var(--beige); border-radius: var(--blobA); color: var(--text); text-decoration: none; }
+.title { font-weight: 700; font-size: 18px; flex: 1; margin-left: 12px; }
+
+/* --mini-stats-- */
+
+.minis { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 14px; }
+.mini { border-radius: 22px 26px 22px 26px; padding: 14px 12px; animation: rise .8s ease both; }
+.mini small { display: block; font-size: 12px; color: var(--muted); }
+.mini b { display: block; font-size: 17px; margin-top: 4px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+/* --toolbar-- */
+
+.toolbar { display: grid; grid-template-columns: 1fr 120px; gap: 10px; margin-bottom: 12px; }
+
+/* --admin-item-- */
+
+.item .acts { display: flex; gap: 6px; }
+.sq { width: 36px; height: 36px; border-radius: 14px; display: grid; place-items: center; background: var(--beige); transition: transform .2s ease; }
+.sq:active { transform: scale(.9); }
+.sq.del { background: var(--pink); color: #8C1D3F; }
+
+/* --danger-- */
+
+.btn.danger { background: #B3261E; }
+
+/* --modal-- */
+
+.modal { position: fixed; inset: 0; background: rgba(27,29,23,.45); display: grid; place-items: center; padding: 20px; z-index: 50; opacity: 0; pointer-events: none; transition: opacity .25s ease; }
+.modal.show { opacity: 1; pointer-events: auto; }
+.mbox { background: var(--bg); border-radius: 28px; padding: 20px; width: 100%; max-width: 440px; transform: translateY(20px); transition: transform .3s ease; }
+.modal.show .mbox { transform: none; }
+.mbox h3 { font-size: 18px; margin-bottom: 10px; }
+.mbox p { color: var(--muted); font-size: 14px; }
+.mbox pre { background: var(--surface); border-radius: 16px; padding: 12px; font-family: 'DM Mono', monospace; font-size: 12px; max-height: 260px; overflow: auto; white-space: pre-wrap; word-break: break-all; }
+.mrow { display: flex; gap: 10px; margin-top: 16px; }
+.mrow .btn { flex: 1; }
+.btn.ghost { background: var(--surface); color: var(--text); }
+
+/* --login-gate-- */
+
+.gate { display: none; min-height: 100vh; place-items: center; }
+.locked .gate { display: grid; }
+.locked header, .locked main, .locked .fnav { display: none; }
+.gcard { width: 100%; max-width: 380px; animation: slideIn .5s ease both; }
+.gcard .brand { justify-content: center; margin-bottom: 4px; }
+.gcard .field { background: var(--bg); }
+.gerr { color: #B3261E; font-size: 13px; min-height: 18px; text-align: center; }
+.fnav.three { grid-template-columns: repeat(3, 1fr); }
+button.back { cursor: pointer; }
